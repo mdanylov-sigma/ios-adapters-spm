@@ -26,7 +26,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .upToNextMajor(from: "12.0.0")),
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .upToNextMajor(from: "13.0.0")),
-        .package(url: "https://github.com/mdanylov-sigma/ios-spm.git", .upToNextMajor(from: "3.2.0"))
+        .package(url: "https://github.com/mdanylov-sigma/ios-spm.git", .upToNextMajor(from: "100.0.0"))
     ],
     targets: [
         .target(
@@ -35,7 +35,7 @@ let package = Package(
                 .product(name: "PrebidMobile", package: "ios-spm"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
-            path: "EventHandlers/PrebidMobileAdMobAdapters",
+            path: "PrebidMobileAdMobAdapters",
             sources: ["Sources"]
         ),
         .target(
@@ -44,7 +44,7 @@ let package = Package(
                 .product(name: "PrebidMobile", package: "ios-spm"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
-            path: "EventHandlers/PrebidMobileGAMEventHandlers",
+            path: "PrebidMobileGAMEventHandlers",
             sources: ["Sources"]
         ),
         .target(
@@ -53,7 +53,7 @@ let package = Package(
                 .product(name: "PrebidMobile", package: "ios-spm"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
             ],
-            path: "EventHandlers/PrebidMobileMAXAdapters",
+            path: "PrebidMobileMAXAdapters",
             sources: ["Sources"]
         ),
     ]
